@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/index")
-public class indexController {
+public class IndexController {
 
     @Autowired
     private IndexServiceImpl indexService;
