@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page isELIgnored="false"%>
 <html>
 <head>
@@ -24,7 +25,7 @@
         function click1() {
             $("#id2").val("dafs");
             $.ajax({
-                url:"http://localhost:8080/testweb/login",
+                url:"http://localhost:8080/testweb/login/query",
                 data:{username:"aaaa",password:"bbbb"},
                 type:"POST",
                 dataType:"text",
@@ -54,6 +55,15 @@
         <input type="button" onclick="click1()" value="按钮"/>
         <input type="submit" onclick="onSubmit()"/>
     </form>
+    <div>
+<%--        <c:forEach var="${m}" items="customer">--%>
+<%--            ID:${customer.id}--%>
+<%--            name:${customer.name}--%>
+<%--        </c:forEach>--%>
+        <c:if test="${m != null}">
+            dsfaag
+        </c:if>
+    </div>
 
 </body>
 </html>

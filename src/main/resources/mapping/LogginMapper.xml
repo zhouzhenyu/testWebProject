@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.zzy.dao.LoginMapper">
 
-    <select id="query" resultType="String">
-        SELECT 1 FROM dual;
+    <select id="query" resultType="com.zzy.domain.Customer">
+        SELECT * FROM customer;
     </select>
 
 </mapper>
